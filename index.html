@@ -23,13 +23,16 @@
       text-align: center;
     }
 
-    #log {
+    .error {
+      color: red;
+      text-align: center;
+    }
+    .info {
       color: green;
       text-align: center;
     }
-
-    .error {
-      color: red;
+    #event {
+      color: blue;
       text-align: center;
     }
 
@@ -53,18 +56,21 @@
 
 <body>
   <div id="band"></div>
-  <h2>Web3 Starter | Dapp</h2>
-  <p>A Dapp Starter to quickly test your smartcontract functionalities on client side using web3js. Start Editing
-    index.js with your contract details</p>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.1/web3.min.js"
-    integrity="sha512-5erpERW8MxcHDF7Xea9eBQPiRtxbse70pFcaHJuOhdEBQeAxGQjUwgJbuBDWve+xP/u5IoJbKjyJk50qCnMD7A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <div style="text-align:center;">
+      <h3>Counter Dapp</h3>
+      <p>Current count: <span id="count">??</span></p>
+      <button id="decrement" style="background-color: rgb(0, 94, 145);">Decrement</button>
+      <button id="increment" style="background-color: rgb(0, 255, 90);">Increment</button>
+    </div>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="index.js"></script>
 </body>
 <footer>
   <hr>
   <div id="log"></div>
+  <hr>
+  <div id="event"></div>
   <h6 style="text-align: right;">&copy Salman Dabbakuti </h6>
 </footer>
 
