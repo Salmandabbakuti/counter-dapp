@@ -9,7 +9,13 @@ const error = (message) => {
 const listener = (message) => $('#event').append(`<span>${message}</span></br>`);
 
 // update contract abi and address
-const abi = [{ "anonymous": false, "inputs": [{ "indexed": false, "internalType": "string", "name": "method", "type": "string" }, { "indexed": false, "internalType": "uint256", "name": "count", "type": "uint256" }, { "indexed": false, "internalType": "address", "name": "caller", "type": "address" }], "name": "Count", "type": "event" }, { "inputs": [], "name": "count", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "decrement", "outputs": [], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [], "name": "getCount", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "increment", "outputs": [], "stateMutability": "nonpayable", "type": "function" }];
+const abi = [
+  "function count() view returns (uint256)",
+  "function decrement()",
+  "function increment()",
+  "function getCount() view returns (uint256)",
+  "event Count(string method, uint256 count, address caller)"
+];
 const address = "0xDBEc9567B99d4441E03784731ba86E017B979206";
 
 $(document).ready(() => {
